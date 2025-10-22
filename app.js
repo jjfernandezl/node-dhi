@@ -116,21 +116,12 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'text/html');
         
         const homeContent = `
-          <h1>Bienvenido al Servidor de Demostración Node.js</h1>
+          <h1>Servidor Demo con Node.js</h1>
           <div class="info">
-            <p>Este es un servidor de demostración construido con Node.js puro (sin dependencias externas).</p>
+            <p>Este es un servidor de demostración construido con Node.js </p>
             <p>Servidor iniciado en: ${new Date().toISOString()}</p>
             <p>Total de solicitudes manejadas: ${requestCount}</p>
           </div>
-          <h2>Características:</h2>
-          <ul>
-            <li>Múltiples rutas y páginas</li>
-            <li>Endpoints de API JSON</li>
-            <li>Registro de solicitudes y estadísticas</li>
-            <li>Plantillas HTML</li>
-            <li>Manejo de errores</li>
-            <li>Gestión de datos de ejemplo</li>
-          </ul>
         `;
         
         res.end(generateHtmlPage('Servidor de Demostración Node.js', homeContent));
